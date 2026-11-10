@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="240" viewBox="0 0 160 240">
+  <rect width="160" height="240" fill="#701a75" rx="8"/>
+  <rect x="12" y="12" width="136" height="216" fill="none" stroke="#d946ef" stroke-width="2" rx="4"/>
+  <text x="80" y="75" fill="#f8fafc" font-size="13" font-family="sans-serif" font-weight="bold" text-anchor="middle">El enigma de la</text>
+  <text x="80" y="95" fill="#f8fafc" font-size="13" font-family="sans-serif" font-weight="bold" text-anchor="middle">habitación 622</text>
+  <text x="80" y="135" fill="#f5d0fe" font-size="11" font-family="sans-serif" text-anchor="middle">Joël Dicker</text>
+  <circle cx="80" cy="180" r="16" fill="#a21caf"/>
+  <text x="80" y="185" fill="#ffffff" font-size="14" text-anchor="middle">🗝️</text>
+</svg>

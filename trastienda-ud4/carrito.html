@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi cesta - La Trastienda</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <!-- CABECERA -->
+  <header>
+    <h1>Mi cesta · 2 artículos</h1>
+  </header>
+
+  <main>
+    <!-- LISTA -->
+    <section aria-label="Lista de artículos">
+      <ul class="lista-carrito">
+        <li>
+          <article class="articulo-carrito">
+            <img src="img/la-paciente-silenciosa.svg" alt="Portada de La paciente silenciosa" width="70" height="105">
+            <div class="info-articulo">
+              <h2><a href="detalle.html">La paciente silenciosa</a></h2>
+              <p class="metadatos">Alex Michaelides · Tapa dura</p>
+              <div class="fila-cantidad-precio">
+                <div class="controles-cantidad">
+                  <button type="button" aria-label="Disminuir una unidad de La paciente silenciosa">−</button>
+                  <span>1</span>
+                  <button type="button" aria-label="Aumentar una unidad de La paciente silenciosa">+</button>
+                </div>
+                <p class="precio">19,90 €</p>
+              </div>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article class="articulo-carrito">
+            <img src="img/el-silencio-de-la-ciudad-blanca.svg" alt="Portada de El silencio de la ciudad blanca" width="70" height="105">
+            <div class="info-articulo">
+              <h2><a href="detalle.html">El silencio de la ciudad blanca</a></h2>
+              <p class="metadatos">Eva García Sáenz de Urturi · Ebook</p>
+              <div class="fila-cantidad-precio">
+                <div class="controles-cantidad">
+                  <button type="button" aria-label="Disminuir una unidad de El silencio de la ciudad blanca">−</button>
+                  <span>1</span>
+                  <button type="button" aria-label="Aumentar una unidad de El silencio de la ciudad blanca">+</button>
+                </div>
+                <p class="precio">9,99 €</p>
+              </div>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <!-- RESUMEN -->
+    <section class="resumen-pedido" aria-label="Resumen del pedido">
+      <dl>
+        <div>
+          <dt>Subtotal</dt>
+          <dd>29,89 €</dd>
+        </div>
+        <div>
+          <dt>Envío</dt>
+          <dd>Gratis</dd>
+        </div>
+        <div>
+          <dt>Total</dt>
+          <dd>29,89 €</dd>
+        </div>
+      </dl>
+      <button type="button" class="btn-tramitar">Tramitar pedido</button>
+    </section>
+  </main>
+
+  <!-- BARRA -->
+  <nav aria-label="Secciones de la app">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="explorar.html">Explorar</a></li>
+      <li><a href="carrito.html" aria-current="page">Cesta</a></li>
+      <li><a href="perfil.html">Perfil</a></li>
+    </ul>
+  </nav>
+</body>
+</html>

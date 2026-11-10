@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="240" viewBox="0 0 160 240">
+  <rect width="160" height="240" fill="#881337" rx="8"/>
+  <rect x="12" y="12" width="136" height="216" fill="none" stroke="#fb7185" stroke-width="2" rx="4"/>
+  <text x="80" y="80" fill="#f8fafc" font-size="16" font-family="sans-serif" font-weight="bold" text-anchor="middle">Reina roja</text>
+  <text x="80" y="140" fill="#fecdd3" font-size="11" font-family="sans-serif" text-anchor="middle">Juan Gómez-Jurado</text>
+  <circle cx="80" cy="180" r="16" fill="#be123c"/>
+  <text x="80" y="185" fill="#ffffff" font-size="14" text-anchor="middle">👑</text>
+</svg>

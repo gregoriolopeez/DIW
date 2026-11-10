@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="240" viewBox="0 0 160 240">
+  <rect width="160" height="240" fill="#451a03" rx="8"/>
+  <rect x="12" y="12" width="136" height="216" fill="none" stroke="#f59e0b" stroke-width="2" rx="4"/>
+  <text x="80" y="80" fill="#f8fafc" font-size="15" font-family="sans-serif" font-weight="bold" text-anchor="middle">El mentiroso</text>
+  <text x="80" y="140" fill="#fde68a" font-size="11" font-family="sans-serif" text-anchor="middle">Mikel Santiago</text>
+  <circle cx="80" cy="180" r="16" fill="#d97706"/>
+  <text x="80" y="185" fill="#ffffff" font-size="14" text-anchor="middle">🌊</text>
+</svg>
