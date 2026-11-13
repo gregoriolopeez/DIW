@@ -1,0 +1,163 @@
+:root {
+  /* Escala primaria */
+  --color-primary-50: #eff6ff; /* oklch(0.970 0.014 254.6) */
+  --color-primary-100: #dbeafe; /* oklch(0.932 0.032 255.6) */
+  --color-primary-200: #bfdbfe; /* oklch(0.882 0.057 254.1) */
+  --color-primary-300: #93c5fd; /* oklch(0.809 0.096 251.8) */
+  --color-primary-400: #60a5fa; /* oklch(0.714 0.143 254.6) */
+  --color-primary-500: #2563eb; /* oklch(0.546 0.215 262.9) */
+  --color-primary-600: #1d4ed8; /* oklch(0.488 0.217 264.4) */
+  --color-primary-700: #1d40af; /* oklch(0.424 0.181 265.4) */
+  --color-primary-800: #1e3a8a; /* oklch(0.379 0.138 265.5) */
+  --color-primary-900: #172554; /* oklch(0.282 0.087 267.9) */
+
+  /* Escala neutra */
+  --color-neutral-50: #f8fafc; /* oklch(0.984 0.003 247.9) */
+  --color-neutral-100: #f1f5f9; /* oklch(0.968 0.007 247.9) */
+  --color-neutral-200: #e2e8f0; /* oklch(0.929 0.013 255.5) */
+  --color-neutral-300: #cbd5e1; /* oklch(0.869 0.020 252.9) */
+  --color-neutral-500: #64748b; /* oklch(0.554 0.041 257.4) */
+  --color-neutral-800: #1e293b; /* oklch(0.279 0.037 260.0) */
+  --color-neutral-900: #0f172a; /* oklch(0.208 0.040 265.8) */
+
+  /* Acento especial (botón o badge destacado) */
+  --color-accent: oklch(0.769 0.165 70.1); /* equivale a #f59e0b (ámbar 500) */
+
+  /* Tokens semánticos (referencian la escala) */
+  --bg-page: var(--color-neutral-100);
+  --bg-card: var(--color-neutral-50);
+  --text-main: var(--color-neutral-900);
+  --text-muted: var(--color-neutral-500);
+  --border-subtle: var(--color-neutral-200);
+  --brand: var(--color-primary-600);
+  --brand-hover: var(--color-primary-700);
+
+  /* Tamaños */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --font-sm: 0.875rem;
+  --font-base: 1rem;
+  --font-lg: 1.125rem;
+  --font-xl: 1.5rem;
+  --line-thin: 1px;
+  --focus-ring: 3px;
+  --radius-md: 12px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: var(--font-base);
+  line-height: 1.5;
+}
+
+header {
+  padding: var(--space-lg);
+
+  h1 {
+    margin: 0;
+    font-size: var(--font-xl);
+    color: var(--text-main);
+  }
+}
+
+main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+}
+
+article.card {
+  background-color: var(--bg-card);
+  border: var(--line-thin) solid var(--border-subtle);
+  border-radius: var(--radius-md, 12px);
+  padding: var(--space-lg);
+
+  &:hover {
+    box-shadow: 0 0 0 var(--focus-ring) oklch(from var(--color-accent) l c h / 0.35);
+  }
+
+  h2 {
+    margin: 0 0 var(--space-xs);
+    font-size: var(--font-lg);
+    color: var(--text-main);
+  }
+
+  .autor {
+    margin: 0;
+    font-size: var(--font-sm);
+    color: var(--text-muted);
+  }
+
+  .precio {
+    margin: var(--space-sm) 0 0;
+    font-weight: 700;
+    color: var(--text-main);
+  }
+
+  .comprar {
+    display: inline-block;
+    margin-top: var(--space-md);
+    padding: var(--space-md) var(--space-lg);
+    border-radius: var(--radius-md, 12px);
+    background-color: var(--brand);
+    color: var(--bg-card);
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover {
+      background-color: var(--brand-hover);
+    }
+
+    &:focus-visible {
+      outline: var(--focus-ring) solid var(--brand);
+      outline-offset: 2px;
+    }
+  }
+}
+
+nav {
+  background-color: var(--bg-card);
+  border-top: var(--line-thin) solid var(--border-subtle);
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    display: block;
+    padding: var(--space-md) var(--space-lg);
+    color: var(--text-muted);
+    text-decoration: none;
+
+    &[aria-current="page"] {
+      color: var(--brand);
+      font-weight: 700;
+    }
+
+    &:hover {
+      color: var(--text-main);
+    }
+
+    &:focus-visible {
+      outline: var(--focus-ring) solid var(--brand);
+      outline-offset: calc(-1 * var(--focus-ring));
+    }
+  }
+}
