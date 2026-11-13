@@ -270,7 +270,53 @@ main > section article button {
   background-color: #166534;
 }
 
-/* BARRA (Inferior) */
+/* ==========================================================================
+   Tarjetas (Recomendados) - Ejercicio 9
+   ========================================================================== */
+
+/* Primera tarjeta de cada sección: combinador hermano adyacente h2 + .card */
+h2 + .card {
+  border-left: 4px solid #1d4ed8;
+}
+
+/* ==========================================================================
+   Badges - Ejercicio 9
+   ========================================================================== */
+
+.badge {
+  display: inline-block;
+  background-color: #dc2626;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  margin-top: 0.4rem;
+}
+
+/* Oculta badges vacíos */
+.badge:empty {
+  display: none;
+}
+
+/* Resalta tarjetas que contienen un badge con texto */
+article:has(.badge:not(:empty)) {
+  outline: 2px solid #dc2626;
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Botones de icono (con aria-label) - Ejercicio 9
+   ========================================================================== */
+
+button[aria-label] {
+  padding: 0.25rem 0.5rem;
+}
+
+/* ==========================================================================
+   BARRA (Inferior)
+   ========================================================================== */
+
 nav[aria-label="Secciones de la app"] {
   position: fixed;
   bottom: 0;
@@ -290,12 +336,24 @@ nav[aria-label="Secciones de la app"] ul {
   margin: 0 auto;
 }
 
-nav[aria-label="Secciones de la app"] a {
+/* Pestaña activa: color primario + negrita */
+nav a[aria-current="page"] {
+  color: #1d4ed8;
+  font-weight: 700;
+}
+
+/* Resto de enlaces: gris */
+nav a:not([aria-current="page"]) {
   color: #64748b;
   font-size: 0.95rem;
 }
 
-nav[aria-label="Secciones de la app"] a[aria-current="page"] {
-  font-weight: 700;
+/* Hover y focus-visible con anillo visible */
+nav a:not([aria-current="page"]):hover,
+nav a:not([aria-current="page"]):focus-visible {
   color: #1d4ed8;
+  outline: 2px solid #1d4ed8;
+  outline-offset: 3px;
+  border-radius: 3px;
+  text-decoration: none;
 }
